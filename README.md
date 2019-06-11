@@ -1,2 +1,2 @@
-# BattleTankProjectUE4
+# BattleTank
 Ben Tristem's course project.
