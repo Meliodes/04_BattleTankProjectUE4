@@ -29,8 +29,8 @@ ATank* ATankAIController::GetAIPossessedTank() const
 
 ATank* ATankAIController::GetPlayerTank() const
 {
-	APawn* PlayerTank = GetWorld()->GetFirstPlayerController()->GetPawn();
-	return Cast<ATank>(PlayerTank);
+	APawn* PlayerPawn = GetWorld()->GetFirstPlayerController()->GetPawn();
+	return Cast<ATank>(PlayerPawn);
 }
 
 
