@@ -1,6 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "Public/TankAIController.h"
+#include "Engine/World.h"
 
 void ATankAIController::BeginPlay()
 {
@@ -12,7 +13,7 @@ void ATankAIController::BeginPlay()
 	}
 	else
 	{
-		UE_LOG(LogTemp, Warning, TEXT("AIController not possessing a tank"));
+		UE_LOG(LogTemp, Warning, TEXT("AIController is not possessing a tank"));
 	}
 
 	auto TargetTank = GetPlayerTank();
