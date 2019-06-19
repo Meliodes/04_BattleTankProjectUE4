@@ -7,6 +7,7 @@
 #include "Tank.generated.h"
 
 class UTankAimingComponent;
+class AProjectile;
 class UTankBarrel;
 class UTankTurret;
 
@@ -40,9 +41,15 @@ public:
 	void SetTurretReference(UTankTurret* TurretToSet);
 
 	UPROPERTY(EditAnywhere, Category = Firing)
-	float LaunchSpeed = 100000; //TODO find sensible default
-
+	float LaunchSpeed = 11000; //TODO find sensible default
 
 	UFUNCTION(BlueprintCallable)
 	void Fire();
+
+	//Local barrel reference for spawning
+	UTankBarrel* Barrel = nullptr;
+
+
+	UPROPERTY(EditAnywhere, Category = Setup)
+	TSubclassOf<AProjectile> ProjectileBlueprint;
 };
